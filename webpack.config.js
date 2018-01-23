@@ -3,7 +3,7 @@ var path = require("path");
 
 module.exports = {
   context: path.join(__dirname),
-  entry: "./src/js/route.js",
+  entry: "./public/src/js/root.js",
   module: {
     rules: [{
       test: /\.js?$/,
@@ -18,7 +18,7 @@ module.exports = {
     }]
   },
   output: {
-    path:__dirname + "/dist/js",//如果需要静态资源再把这个打开
+    path:__dirname + "/public/dist/js",//如果需要静态资源再把这个打开
     filename: "bundle.js"
   }
 }

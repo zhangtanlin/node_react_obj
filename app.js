@@ -1,16 +1,16 @@
 var express = require('express');
+var app = express();
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 
-//路由调用
-var user = require("./routes/user");
-var index = require("./routes/index");
+//分发路由文件
+var routes = require("./routes");
+routes(app);
 
-var app = express();
-
-// view engine setup
+//模板的路径
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -20,10 +20,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
-//路由调用
-index(app);	//app.use("/",require('./routes/index'));
-user(app);	//app.use("/admin",require('./routes/admin'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
