@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<meta charset="UTF-8" />
-		<title>
-			首页
-		</title>
-		<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+		<meta charset="UTF-8">
+		<title>node_react_obj</title>
 	</head>
-
 	<body>
-		<div>
-			首页
-		</div>
+		<div id="example"></div>
 		
-		<script type="text/javascript">
-			$(document).ready(function() {
-				
-				//页面加载时验证token
-				var token = localStorage.getItem('token');
-				console.log(token);
-				$.get("/",{token:token},function(data){
-					console.log(data);
-				})
-				
-			});
-		</script>
+		<script type="text/javascript" src="./dist/js/bundle.js"></script>
 	</body>
-
 </html>

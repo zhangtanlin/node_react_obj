@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "node": "node ./bin/www",
-    "webpack": "webpack-dev-server --inline --hot --port 80",
-    "start": "npm run webpack && npm run node"
+    "start": "node ./bin/www",	
+    "webpack": "webpack --watch"
   },
   "dependencies": {},
   "devDependencies": {
@@ -36,6 +35,8 @@
     "serve-favicon": "~2.4.2",
     "session-file-store": "^1.1.2",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-middleware": "^2.0.4",
+    "webpack-dev-server": "^2.11.1",
+    "webpack-hot-middleware": "^2.21.0"
   }
 }

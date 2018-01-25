@@ -26,6 +26,10 @@ var loginRegistSchema = new mongoose.Schema({
     },
     user_type: {
         type: String
+    },
+    token:{
+    	type: String,
+        require: true
     }
 });
 var m_loginregist = mongoose.model("loginRegist", loginRegistSchema, "user");

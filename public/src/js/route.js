@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route,Link } from 'react-router-dom'
 
-import Index from './components/index';
-import Login from './components/login';
+import Index from './components/pc/index';
+import Login from './components/pc/login';
 
 class Root extends React.Component{
  render(){
