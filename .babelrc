@@ -1,6 +1,6 @@
 {
   "presets": ["react"],
-  "plugins": [
+  "plugins": [ 	
   	"transform-react-constant-elements",
   	"transform-react-display-name",
   	"transform-react-inline-elements",
